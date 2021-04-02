@@ -29,9 +29,9 @@ spec:
             container('shell'){
                 //sh 'cat charts.json'
                 
-                script {                
-                    def chartVars = readJSON file: "${WORKSPACE}/charts.json"
-
+                def chartVars = readJSON file: "${WORKSPACE}/charts.json"
+                
+                script {
                     print(chartVars)
                 }
             }
