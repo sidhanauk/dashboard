@@ -30,6 +30,7 @@ spec:
                     script {
                         timestamps {
                             def chartVars = readJSON file: "${WORKSPACE}/charts.json"
+                            print(chartVars)
                         }
                     }
                 }
