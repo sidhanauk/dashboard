@@ -26,9 +26,9 @@ spec:
     stages {
         stage('Main') {
             steps{
-                container('shell'){
+                //container('shell'){
                   def chartVars = readJSON file: "${WORKSPACE}/charts.json"
-            }
+            //}
         }
     }
   }
