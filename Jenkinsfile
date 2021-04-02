@@ -25,11 +25,15 @@ spec:
     }
     stages {
         stage('Main') {
-            steps{
-                //container('shell'){
-                  def chartVars = readJSON file: "${WORKSPACE}/charts.json"
-            //}
+            steps {
+                container('shell'){
+                    script {
+                        timestamps {
+                            def chartVars = readJSON file: "${WORKSPACE}/charts.json"
+                        }
+                    }
+                }
+            }
         }
     }
   }
-}
